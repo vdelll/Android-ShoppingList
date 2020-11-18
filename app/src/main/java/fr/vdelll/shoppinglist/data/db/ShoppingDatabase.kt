@@ -1,9 +1,10 @@
-package fr.vdelll.shoppinglist
+package fr.vdelll.shoppinglist.data.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import fr.vdelll.shoppinglist.data.entities.ShoppingItem
 
 /**
  * Created by vdelll on 18/11/2020.
@@ -23,8 +24,13 @@ abstract class ShoppingDatabase: RoomDatabase() {
         private var instance: ShoppingDatabase? = null
         private val LOCK = Any()
 
-        operator fun invoke(context: Context) = instance ?: synchronized(LOCK){
-            instance ?: createDatabase(context).also { instance = it }
+        operator fun invoke(context: Context) = instance
+            ?: synchronized(LOCK){
+            instance
+                ?: createDatabase(
+                    context
+                )
+                    .also { instance = it }
         }
 
         private fun createDatabase(context: Context) =

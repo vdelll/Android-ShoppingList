@@ -1,4 +1,4 @@
-package fr.vdelll.shoppinglist
+package fr.vdelll.shoppinglist.data.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
