@@ -25,23 +25,23 @@
         android:ems="10"
         android:hint="Name"
         android:inputType="text"
-        app:layout_constraintEnd_toStartOf="@+id/tv_add"
+        app:layout_constraintEnd_toStartOf="@+id/et_amount"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 
     <TextView
-        android:id="@+id/et_amount"
+        android:id="@+id/tv_cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:textSize="18sp"
         android:text="CANCEL"
-        app:layout_constraintEnd_toStartOf="@+id/tv_cancel"
-        app:layout_constraintTop_toBottomOf="@+id/tv_add" />
+        app:layout_constraintEnd_toStartOf="@+id/tv_add"
+        app:layout_constraintTop_toBottomOf="@+id/et_amount" />
 
     <TextView
-        android:id="@+id/tv_cancel"
+        android:id="@+id/tv_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -49,10 +49,10 @@
         android:text="ADD"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_add" />
+        app:layout_constraintTop_toBottomOf="@+id/et_amount" />
 
     <EditText
-        android:id="@+id/tv_add"
+        android:id="@+id/et_amount"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"

@@ -1,15 +1,13 @@
 package fr.vdelll.shoppinglist.data.db
 
 import androidx.lifecycle.LiveData
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import fr.vdelll.shoppinglist.data.entities.ShoppingItem
 
 /**
  * Created by vdelll on 18/11/2020.
  */
+@Dao
 interface ShoppingDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
